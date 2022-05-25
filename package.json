@@ -1,0 +1,23 @@
+{
+  "name": "dbapi",
+  "version": "1.0.0",
+  "description": "Database api for latitude and longitude",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rokerzsa/dbapi.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rokerzsa/dbapi/issues"
+  },
+  "homepage": "https://github.com/rokerzsa/dbapi#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
