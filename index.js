@@ -1,4 +1,5 @@
 const express = require('express');
+const os = require('os');
 const Joi = require('joi');
 const fs = require('fs');
 const { resourceLimits } = require('worker_threads');
@@ -55,6 +56,8 @@ app.post('/api/gps', (req, res) => {
     }
 });
 
-
+const networkInterfaces = os.networkInterfaces();
+const ip_add = networkInterfaces['Wi-Fi'][3].address;
+console.log(ip_add);
 const port = process.env.PORT || 3000;
-app.listen(3000, () => console.log(`Listening to port ${port}`))
+app.listen(3000, ip_add, () => console.log(`Listening to port: ${port} and IP: ${ip_add}`))
