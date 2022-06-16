@@ -19,8 +19,6 @@ function validateCoordinates(coordinates) {
     });
     return schema.validate(coordinates);
 }
-
-
 app.get('/api/gps', (req, res) => {
     res.json(gpsjsonFile);
 });
@@ -57,7 +55,7 @@ app.post('/api/gps', (req, res) => {
 });
 
 const networkInterfaces = os.networkInterfaces();
-const ip_add = networkInterfaces['Wi-Fi'][3].address;
+const ip_add = networkInterfaces['Wi-Fi'][1].address;
 console.log(ip_add);
 const port = process.env.PORT || 3000;
 app.listen(3000, ip_add, () => console.log(`Listening to port: ${port} and IP: ${ip_add}`))
